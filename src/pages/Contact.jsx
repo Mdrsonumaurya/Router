@@ -36,7 +36,6 @@ const ContactPage = () => {
             Get in touch with our dance studio team
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -167,9 +166,8 @@ const ContactPage = () => {
             </form>
           </div>
         </div>
-
-        {/* Map Section */}
-        {/* <div className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
+        Map Section
+        <div className="mt-12 bg-white rounded-lg shadow-lg overflow-hidden">
           <iframe
             title="Studio Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343004!2d-73.9854282845938!3d40.74844047932881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629787217973!5m2!1sen!2sus"
@@ -180,7 +178,7 @@ const ContactPage = () => {
             loading="lazy"
             className="rounded-lg"
           ></iframe>
-        </div> */}
+        </div>
       </div>
     </div>
   );
