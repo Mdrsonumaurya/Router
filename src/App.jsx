@@ -1,16 +1,42 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
-import Pokemonproject from "./Pokemonproject";
-// import Pokemone from "./pokemone";
-// import Pockmon2 from "./Pockmon2";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Moves from "./pages/Moves";
+import AppLayout from "./layout/AppLayout";
+import { GetAPIData } from "./api/GetAPIData";
 
-function App() {
-  return (
-    <div className="App flex justify-center items-center min-h-screen bg-gray-100">
-      {/* <Pokemone pokemonName="pikachu" /> */}
-      {/* <Pockmon2 apiDataName="pickachu"/> */}
-      <Pokemonproject className="text-black-500" />
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/about",
+        element: <About />
+      },
+      {
+        path: "/moves",
+        element: <Moves />,
+        loader: GetAPIData
+      },
+
+      {
+        path: "/contact",
+        element: <Contact />
+      }
+    ]
+  }
+]);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
